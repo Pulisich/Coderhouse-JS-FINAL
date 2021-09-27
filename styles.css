@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #bf8b85;
+}
+.containerGrande{
+    background-color: #f8dcd9;
+}
+
+::-webkit-scrollbar{
+    width: auto;
+    background: #f8dcd9;
+    border-radius: 50px;
+
+}
+
+::-webkit-scrollbar-thumb{
+    width: auto;
+    background: turquoise;
+    border-radius: 0px;
+}
+
+/*NAV*/
+
+nav{
+    background-color: #060505;
+    text-align: center;
+    position: sticky;
+    width: 100%;
+    height: 5%;
+    margin-bottom: 5px;
+    padding: 1%;
+   
+}
+
+
+nav a{
+    text-decoration: none;
+    color: #fbfbff;
+}
+
+
+.uListaNav{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-around;    
+}
+
+
+/*HEADER*/
+#header{
+    margin-top: 0;
+    background-color: #060505;
+    color: #fbfbff;
+}
+
+#header h1{
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: 'Merriweather', serif;;
+}
+
+#header h2{
+    text-align: center;
+    padding-bottom: 1%;
+    font-family: 'Merriweather', serif;
+}
+/*CARDS*/
+
+#cards{
+    display: block;
+}
+#cards h2{
+    background-color: #060505;
+    text-align: center;
+    color: #fbfbff;
+}
+.ulistaProd{
+    background-color: #368f8b;
+    text-align: center;
+}
+.ulistaProd li{
+    background-color: #368f8b;
+}
+
+.ulistaProd li h3{
+    color: #fbfbff;
+    font-size: 40px;
+}
+
+.ulistaProd li h2{
+    color: #fbfbff;
+    font-size: 50px;
+}
+
+.ulistaProd li p{
+    color: #fbfbff;
+    font-size: 35px;
+}
+
+.ulistaProd li b{
+    color: #fbfbff;
+    font-size: 35px;
+}
+
+.ulistaProd button{
+    background-color: #060505;
+    color: #fbfbff;
+    border-style: none;
+    font-size: 25px;
+    padding: 1%;
+}
+.imgProd{
+    max-width: 100%;
+    height: auto;
+}
+
+/*CARRITO*/
+
+.oculto{
+    display: none;
+}
+
+#carrito{
+    background-color: #060505;
+    color: #fbfbff;
+    margin-left: 45%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 10%;
+    font-size: 20px;
+    border-style: groove;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+#carro{
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+#aComprar{
+    text-align: center;
+    margin-top: 2%;
+}
+
+
+#totalCarro{
+    background-color: #060505;
+    color: #fbfbff;
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+}
+
+/*BOTONES CARRITO*/
+#linkWA a{
+    text-decoration: none;
+}
+
+
+/*ITEMS EN EL CARRO*/
+#itemCarro{
+    background-color: #bf8b85;
+    color: #060505;
+    font-size: 20px;
+    padding-top:1% ;
+    padding-bottom: 1%;
+}
+
+/*FOOTER*/
+
+footer{
+    background-color: #246a73;
+}
+
+.listaFooter{
+    text-decoration: none;
+}
+
+.listaImagen{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.listaImagen li{
+    list-style: none;
+    
+    
+}
+
+.listaContacto{
+    text-align: center;
+}
+
+.listaContacto li{
+    list-style: none;
+
+}
+
+.firma{
+    font-size: larger;
+}

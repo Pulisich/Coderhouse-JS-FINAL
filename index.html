@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <!--BOOTSRAP.-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!--FUENTES DE GOOGLE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    
+    <title>Pastas Delicatessen</title>
+</head>
+<body>
+    <body>
+        <div class="containerGrande container-fluid">
+           
+            
+                <nav>
+                    <div class="uListaNav">
+                        
+                        <a href="">HOME</a>
+                        <a href="">SERVICIOS</a>
+                        <a href="">CONTACTO</a>
+    
+                    </div>
+                </nav>
+                
+            <div class="container-fluid" id="header"> 
+                <header>
+                    <h1>Jorge Landa Delicatessen</h1>
+                </header>
+            
+                <h2>Pastas de Autor</h2>
+        
+            </div>
+
+            <div>
+                <button type="button" id="carrito" target="carro">
+                         Ver Carrito
+                </button>
+            </div>
+
+            <div class="oculto" id="carro">
+                
+                <h3>Tu carrito de compras</h3>
+                
+                <div id="dentro" class="total">
+                   
+                </div>
+                
+                <div id="aComprar">
+                    
+                    <button id="limpiarCarro" class="btn-danger">Limpiar Carro</button>
+                    <button id="pagarItem">Pagar con Mercado Pago</button>
+                    <a id="linkWA" href="https://api.whatsapp.com/send?phone=543584909380" target="blank"><button id="whatsApp" class="btn-success">Pedir por WhatsApp</button></a>
+               
+                </div>
+            
+            </div> 
+     
+        <div id="cards">
+            <h2>Productos</h2>
+        </div> 
+
+        <div id="productos">
+            <ul class="ulistaProd"><!--Sacar lineas con el CSS.-->
+
+            </ul>
+       </div>
+
+
+      
+
+      
+        <footer>
+            <div class="listasFooter">
+                <div>
+                    <ul class="listaImagen">
+                
+                        <li><img src="img/mail_black_24dp 2.svg"  alt="" class="imgLista"></li>
+                        <li><img src="img/photo_camera_black_24dp 2.svg" class="imgLista" alt=""></li>
+                        <li><a href="#carro"><img src="img/shopping_basket_black_24dp 2.svg" class="imgLista" alt="" ></a></li>
+                    
+                    </ul>
+                 </div>
+                
+                 <div class="listaContacto">
+                    
+                    <p class="contacto">CONTACTO</p>
+                    
+                    <ul>
+                        <li>
+                            <p><img src="img/call_black_24dp 4.png" alt="">+5493584909380</p>
+                        </li>
+                        <li>
+                            <p>@jl.productosartesanales</p>
+                        </li>
+                        <li>
+                            <p><img src="img/place_black_24dp 4.png" alt=""> Córdoba Capital</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+                <p class="firma">Developed by <a href="">PULISICH</a></p>
+               
+        </footer>
+    </div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="productos.js"></script>
+    <script src="scripts.js"></script> 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
