@@ -2,13 +2,16 @@
     margin: 0;
     padding: 0;
 }
-
+/*BODY*/
 body{
     background-color: #bf8b85;
 }
+/*CONTAINER*/
 .containerGrande{
     background-color: #f8dcd9;
 }
+
+/*SCROLL*/
 
 ::-webkit-scrollbar{
     width: auto;
@@ -70,7 +73,8 @@ nav a{
     padding-bottom: 1%;
     font-family: 'Merriweather', serif;
 }
-/*CARDS*/
+
+/*CARDS DE PRODUCTOS*/
 
 
 
@@ -189,8 +193,21 @@ nav a{
 /*FOOTER*/
 
 footer{
+    padding-top: 2%;
+    
     background-color: #246a73;
+    font-size: 20px;
 }
+
+footer a:link, a:visited {
+    color: #fbfbff;
+    text-decoration: none;
+    cursor: pointer ;
+  }
+  
+footer a:link:active, a:visited:active {
+    color: #fbfbff;
+  }
 
 .listaFooter{
     text-decoration: none;
@@ -210,6 +227,7 @@ footer{
 
 .listaContacto{
     text-align: center;
+    
 }
 
 .listaContacto li{
@@ -219,4 +237,9 @@ footer{
 
 .firma{
     font-size: larger;
+    text-align: end;
+}
+
+.firma a{
+    background-color: #368f8b;
 }
