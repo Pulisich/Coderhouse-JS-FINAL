@@ -4,12 +4,18 @@
 
 const renderProductos =()=>{
     for (const producto of productos) {
-     $(".ulistaProd").append(`<li class="list-group-item border-0"><h3> ${producto.tipo}</h3></li>
-     <li class="list-group-item border-0"><h2>  Relleno: ${producto.relleno}</h2></li>
-     <div> <img src= ${producto.foto} width: "55" height: "auto" class = "imgProd"></div>
-     <li class="list-group-item border-0"><p> Cantidad por caja: ${producto.caja}</p></li>
-     <li class="list-group-item border-0"><b> Precio: $${producto.precio}</b></li>
-     <button type="button" id="boton${producto.id}"> Agregar al carro </button> `); //Genera un botón por cada producto con su propio ID
+     
+        $(".ulistaProd").append(`<li class="list-group-item border-0"><h3> ${producto.tipo}</h3></li>
+    
+        <li class="list-group-item border-0"><h2>  Relleno: ${producto.relleno}</h2></li>
+     
+        <div> <img src= ${producto.foto} width: "55" height: "auto" class = "imgProd"></div>
+     
+        <li class="list-group-item border-0"><p> Cantidad por caja: ${producto.caja}</p></li>
+     
+        <li class="list-group-item border-0"><b> Precio: $${producto.precio}</b></li>
+     
+        <button type="button" id="boton${producto.id}"> Agregar al carro </button> `); //Genera un botón por cada producto con su propio ID
     
     
         //BOTONES PARA AGREGAR AL CARRO POR CADA ITEM
@@ -23,10 +29,15 @@ const renderProductos =()=>{
             //ME CREA UNA MINI CARD DEL PRODUCTO EN EL CARRO
 
             console.log(`${producto.tipo}  relleno de  ${producto.relleno} agregado al carro`)
+            
             $("#dentro").append(`<div id="itemCarro"><p> ${producto.tipo}</p>
+            
             <p>${producto.relleno}</p>
+            
             <p>${producto.caja}</p
+            
             <p>$${producto.precio}</p>
+          
             </div> `)
 
 
@@ -44,9 +55,11 @@ const renderProductos =()=>{
             
             //CALCULO EL TOTAL DEL CARRO USANDO REDUCE PARA AGARRAR EL PRECIO
 
-           const total = listaCarrito.map( producto => producto.precio).reduce((prev, next)=> prev + next);
           
-           console.log( "Su total es de: $" + total);
+            const total = listaCarrito.map( producto => producto.precio).reduce((prev, next)=> prev + next);
+          
+          
+            console.log( "Su total es de: $" + total);
 
 
             //BORRA EL TOTAL DE ANTES
@@ -74,6 +87,7 @@ function compare (a, b){
  }
 
 
+ JSON.stringify(productos.sort(compare));
 
 
 //ARRAY DE PRODUCTOS DEL CARRITO
@@ -88,10 +102,8 @@ class Pasta {
         this.precio= precio;
         
     }
-//ACÁ A LO MEJOR PUEDE ESTAR LA RESPUESTA PARA CALCULAR EL TOTAL
 };
 
 
-console.log(productos.sort(compare));
 
 

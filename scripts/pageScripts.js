@@ -1,11 +1,29 @@
+//ACÁ ESTÁN TODOS LOS SCRIPTS QUE SE PRE CARGAN EN LA PÁGINA
+
 //READY Y LOAD
 $(document).ready(function(){
-    
-    //PRODUCTOS EN EL LOCAL STORAGE
+
+     //CARGANDO ELEMENTOS DE LA PÁGINA 
+
+     $("#header").slideUp(1)
+     .slideDown(2000)
+ 
+     $(".ulistaProd").slideUp(0)
+     .slideDown(5000)
+ 
+     $("footer").slideUp(0)
+     .slideDown(10000)
+ 
+    //LIMPIAMOS EL LOCAL STORAGE CADA VEZ QUE SE ACTUALIZA LA PÁGINA
+    localStorage.clear()
+
+    //PRODUCTOS DISPONIBLES ALMACENADOS EN EL LOCAL STORAGE
         
     localStorage.setItem("Productos disponibles", JSON.stringify(productos));
-        
-    //CARDS DE LOS PRODUCTOS    
+    
+   
+
+    // RENDERIZAR CARDS DE LOS PRODUCTOS   
 
     renderProductos();
 
@@ -20,7 +38,7 @@ $(document).ready(function(){
 
 
 
-    //PAGAR CON MERCADOPAGO EN JQUERY
+    //PAGAR CON MERCADOPAGO EN JQUERY (NO TENGO CREDENCIALES PARA AGREGAR LA API)
 
     $("#pagarItem").on("click", function(){
         Swal.fire({
@@ -29,6 +47,8 @@ $(document).ready(function(){
             text: 'Mercado Pago no está funcionando, probá más tarde o pedí por WhatsApp',
             footer: '<a href="https://api.whatsapp.com/send?phone=543584909380" target="blank">Pedir por WhatsApp</a>'
         })
+
+        console.log("Credenciales de Mercado Pago no disponibles, por favor ordene por WhatsApp")
     })
 
     // 
@@ -40,14 +60,16 @@ $(document).ready(function(){
     $("#limpiarCarro").on("click", function(){
         $("#dentro").children().remove();
 
+        //LIMPIA EL LOCAL STORAGE
         localStorage.clear();
 
+        //REINICIA EL LOCAL STORAGE CON LOS PRODUCTOS DISPONIBLES
 
         localStorage.setItem("Productos disponibles", JSON.stringify(productos));
 
-        //CHAU TODOS LOS ITEMS, CUANDO AGREGÁS OTRO ITEM AL CARRO YA VACÍO SE REINICIA TODO
+        //UNA VEZ QUE EL CARRITO SE LIMPIA, AL AGREGAR OTRO ITEM SE REINICIA EL MISMO
 
-         localStorage.getItem("En Carro", listaCarrito.splice([0]))
+        localStorage.getItem("En Carro", listaCarrito.splice([0]))
 
         
         
@@ -65,17 +87,7 @@ $(document).ready(function(){
 
 
 
-    //Se carga la página 
-
-    $("#header").slideUp(1)
-    .slideDown(2000)
-
-    $(".ulistaProd").slideUp(0)
-    .slideDown(5000)
-
-    $("footer").slideUp(0)
-    .slideDown(10000)
-
+   
 
 
 })

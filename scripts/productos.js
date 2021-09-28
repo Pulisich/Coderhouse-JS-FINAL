@@ -1,3 +1,5 @@
+//TODOS LOS PRODUCTOS DISPONIBLES
+
 const productos= [
     {   
         id:1,

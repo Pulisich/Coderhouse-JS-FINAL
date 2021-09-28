@@ -22,7 +22,7 @@ body{
 
 ::-webkit-scrollbar-thumb{
     width: auto;
-    background: turquoise;
+    background-color: #368f8b;
     border-radius: 0px;
 }
 
@@ -85,11 +85,14 @@ nav a{
     background-color: #060505;
     text-align: center;
     color: #fbfbff;
+    
 }
 .ulistaProd{
     background-color: #368f8b;
     text-align: center;
     list-style: none;
+    font-family: 'Merriweather', serif;
+
 }
 .ulistaProd li{
     background-color: #368f8b;
@@ -143,7 +146,6 @@ nav a{
 #carrito{
     background-color: #060505;
     color: #fbfbff;
-    margin-left: 45%;
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     padding-left: 1%;
@@ -151,6 +153,9 @@ nav a{
     border-radius: 10%;
     font-size: 20px;
     border-style: groove;
+    align-self: center;
+    margin-left: 45%;
+
     margin-top: 2%;
     margin-bottom: 2%;
 }
@@ -164,6 +169,8 @@ nav a{
 #aComprar{
     text-align: center;
     margin-top: 2%;
+    font-size: 20px;
+    
 }
 
 
@@ -176,6 +183,8 @@ nav a{
 }
 
 /*BOTONES CARRITO*/
+
+
 #linkWA a{
     text-decoration: none;
 }
@@ -185,7 +194,7 @@ nav a{
 #itemCarro{
     background-color: #bf8b85;
     color: #060505;
-    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;    font-size: 20px;
     padding-top:1% ;
     padding-bottom: 1%;
 }
@@ -194,9 +203,10 @@ nav a{
 
 footer{
     padding-top: 2%;
-    
     background-color: #246a73;
     font-size: 20px;
+    font-family: 'Roboto Mono', monospace;    font-size: 20px;
+
 }
 
 footer a:link, a:visited {
