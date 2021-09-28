@@ -87,11 +87,11 @@ $(document).ready(function(){
 
 const renderProductos =()=>{
     for (const producto of productos) {
-     $(".ulistaProd").append(`<li class="list-group-item"><h3> ${producto.tipo}</h3></li>
-     <li class="list-group-item"><h2>  Relleno: ${producto.relleno}</h2></li>
+     $(".ulistaProd").append(`<li class="list-group-item border-0"><h3> ${producto.tipo}</h3></li>
+     <li class="list-group-item border-0"><h2>  Relleno: ${producto.relleno}</h2></li>
      <div> <img src= ${producto.foto} width: "55" height: "auto" class = "imgProd"></div>
-     <li class="list-group-item"><p> Cantidad por caja: ${producto.caja}</p></li>
-     <li class="list-group-item"><b> Precio: $${producto.precio}</b></li>
+     <li class="list-group-item border-0"><p> Cantidad por caja: ${producto.caja}</p></li>
+     <li class="list-group-item border-0"><b> Precio: $${producto.precio}</b></li>
      <button type="button" id="boton${producto.id}"> Agregar al carro </button> `); //Genera un botón por cada producto con su propio ID
     
     
@@ -115,7 +115,7 @@ const renderProductos =()=>{
 
 
 
-            //AGREGA PRODUCTOS AL CARRITO USANDO PUSH, EL CONSTRUCTOR ES PASTA, LOS DATOS VIENEN DE LOS PRODUCTOS
+            //AGREGA PRODUCTOS AL ARRAY CARRITO USANDO PUSH, EL CONSTRUCTOR ES PASTA, LOS DATOS VIENEN DE LOS PRODUCTOS
            
             listaCarrito.push(new Pasta (producto.tipo, producto.relleno, producto.caja, producto.precio));
                     
@@ -132,7 +132,7 @@ const renderProductos =()=>{
           
            console.log( "Su total es de: $" + total);
          
-            //ACTUALIZAMOS EL TOTAL
+            //ACTUALIZAMOS EL TOTAL (NOTA: EL TOTAL NO SE BORRA PERO SE MODIFICA CON CADA ITEM QUE SE AGREGA CUANDO ELIMINAMOS DE A UNO)
 
            let totalCarro = $(".total").prepend(`<p id="totalCarro">TOTAL: $${total}</p>`)
 
@@ -141,6 +141,7 @@ const renderProductos =()=>{
 
              //PARA SACAR EL ITEM DEL CARRO DE A UNO
      
+             //EN EL HTML BORRA DE A UNO
             let quitarCarro = document.getElementsByClassName("quitarItem")
             
             for( var i = 0; i < quitarCarro.length; i++){
@@ -153,11 +154,12 @@ const renderProductos =()=>{
                     console.log(` ${producto.tipo}  relleno de  ${producto.relleno} eliminado del carro.`)
 
 
-                    localStorage.getItem("En Carro", listaCarrito.splice(0 , 1))
-                    localStorage.setItem("En Carro",JSON.stringify (listaCarrito))
+                    // localStorage.getItem("En Carro", listaCarrito.splice(0 , 1))
+                    // localStorage.setItem("En Carro",JSON.stringify (listaCarrito))
                    
                 })
             }
+
 
 
                      

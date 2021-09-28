@@ -72,6 +72,8 @@ nav a{
 }
 /*CARDS*/
 
+
+
 #cards{
     display: block;
 }
@@ -83,6 +85,7 @@ nav a{
 .ulistaProd{
     background-color: #368f8b;
     text-align: center;
+    list-style: none;
 }
 .ulistaProd li{
     background-color: #368f8b;
@@ -109,15 +112,22 @@ nav a{
 }
 
 .ulistaProd button{
+    margin-top: 0.9%;
+
+    margin-bottom: 0.9%;
+
     background-color: #060505;
     color: #fbfbff;
     border-style: none;
+    border-radius: 25px;
     font-size: 25px;
     padding: 1%;
+
 }
 .imgProd{
     max-width: 100%;
     height: auto;
+    border-radius: 25px;
 }
 
 /*CARRITO*/
